@@ -1,0 +1,221 @@
+/* chef-style.css */
+
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: #f0f4f8; 
+    margin: 0;
+    padding: 20px;
+    color: #2c3e50;
+}
+
+h1 {
+    color: #e67e22; /* To'q sariq - Umumiy sarlavha */
+    text-align: center;
+    margin: 0 0 30px 0;
+    font-weight: 700;
+    font-size: 2.5em;
+}
+
+/* Har bir buyurtma blokini alohida panel sifatida formatlash */
+.chef-dashboard-container {
+    max-width: 1200px;
+    margin: 20px auto; /* Yuqori va pastdan masofa qo'shildi */
+    padding: 30px;
+    background-color: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+    border: 1px solid #e0e0e0; /* Har bir buyurtma bloki chegarasi */
+}
+
+.status-info {
+    text-align: left; /* Chap tomonga olindi */
+    margin-bottom: 20px;
+    font-size: 1.2em;
+    font-weight: 600;
+    color: #34495e;
+    border-bottom: 2px solid #e67e22; /* Buyurtma blokini ajratish */
+    padding-bottom: 10px;
+}
+
+/* Buyurtma ichidagi taomlar uchun Grid tuzilishi */
+.orders-list-grid {
+    display: grid;
+    /* Kartalarni 350px dan kichik bo'lmagan holda yonma-yon joylashtirish */
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 20px; /* Kartalar orasidagi masofa */
+    padding-top: 10px;
+}
+
+/* --- Taom Kartasi Stili (menu-item) --- */
+.menu-item {
+    background-color: #fcfcfc;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 1px 5px rgba(0, 0, 0, 0.08);
+    border: 1px solid #eee;
+    display: flex; 
+    gap: 15px;
+    align-items: flex-start;
+    transition: box-shadow 0.2s;
+}
+
+.menu-item:hover {
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+}
+
+.item-image {
+    width: 70px; /* Rasm o'lchami kichraytirildi */
+    height: 70px;
+    object-fit: cover;
+    border-radius: 6px;
+    border: 1px solid #ddd;
+    flex-shrink: 0; 
+}
+
+.item-details {
+    flex-grow: 1;
+}
+
+.item-name {
+    font-weight: 700;
+    font-size: 1.1em;
+    color: #34495e;
+    margin-bottom: 3px;
+}
+
+.item-price {
+    font-weight: 600;
+    color: #e67e22; /* To'q sariq narx */
+    font-size: 0.95em;
+    margin-bottom: 5px;
+}
+
+.item-description {
+    font-size: 0.85em;
+    color: #7f8c8d;
+    margin: 0;
+}
+
+
+/* --- "Buyurtma tayor bo'ldi" Tugmasi Stili --- */
+.add-dummy-btn {
+    /* HTMLdagi "add-dummy-order-btn" IDsi o'rniga "add-dummy-btn" klassidan foydalanildi */
+    display: block;
+    width: 100%; /* To'liq kenglik */
+    padding: 12px;
+    background-color: #2ecc71; /* Yashil */
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 1.1em;
+    font-weight: 700;
+    cursor: pointer;
+    margin-top: 25px; /* Yuqoridan masofa */
+    transition: background-color 0.3s, transform 0.1s;
+}
+
+.add-dummy-btn:hover {
+    background-color: #27ae60;
+}
+
+.add-dummy-btn:active {
+    transform: scale(0.99);
+}
+
+/* --- Xabar Stili --- */
+.no-orders-message {
+    text-align: center;
+    color: #95a5a6;
+    font-size: 1.5em;
+    margin-top: 50px;
+    padding: 20px;
+    border: 1px dashed #dcdcdc;
+    border-radius: 10px;
+}
+
+/* --- Media Queries (Responsivlik) --- */
+
+/* 768px dan kichik ekranlar (ko'pchilik planshet va smartfonlar) */
+@media (max-width: 768px) {
+    
+    .chef-dashboard-container {
+        padding: 20px;
+        margin: 15px auto;
+    }
+
+    h1 {
+        font-size: 2em;
+        padding: 0 5px;
+    }
+
+    /* Buyurtma kartalari katta ekranlarda 3-4 ta bo'lsa, kichik ekranlarda 1 ta ustun bo'lishi kerak */
+    .orders-list-grid {
+        grid-template-columns: 1fr; /* Faqat bitta ustun */
+        gap: 15px;
+    }
+
+    /* Taom kartasi ichidagi rasmni va matnni kichikroq qilish */
+    .menu-item {
+        padding: 12px;
+        flex-direction: row; /* Elementlar yonma-yon qolaveradi, lekin kichikroq bo'ladi */
+        gap: 10px;
+    }
+    
+    .item-image {
+        width: 60px;
+        height: 60px;
+    }
+    
+    .item-name {
+        font-size: 1.1em;
+    }
+    
+    .item-price, .item-description {
+        font-size: 0.85em;
+    }
+
+    .status-info {
+        font-size: 1.1em;
+    }
+    
+    .add-dummy-btn {
+        padding: 10px;
+        font-size: 1em;
+    }
+}
+
+/* 480px dan kichik ekranlar (kichik smartfonlar) */
+@media (max-width: 480px) {
+    body {
+        padding: 10px;
+    }
+    
+    h1 {
+        font-size: 1.6em;
+    }
+
+    /* Eng kichik ekranlarda rasm va matnni vertikal joylashtirish */
+    .menu-item {
+        flex-direction: column; 
+        align-items: center;
+        text-align: center;
+    }
+
+    .item-image {
+        width: 80px;
+        height: 80px;
+        margin-bottom: 5px;
+    }
+
+    .item-details {
+        width: 100%;
+    }
+    
+    .item-name {
+        font-size: 1.1em;
+    }
+    
+    .item-description {
+        display: none; /* Kichik ekranlarda tavsifni yashirish */
+    }
+}

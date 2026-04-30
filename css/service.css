@@ -1,0 +1,239 @@
+/* service.css */
+
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: #f0f4f8; 
+    margin: 0;
+    padding: 20px;
+    color: #2c3e50;
+}
+
+h1 {
+    color: #3498db; /* Moviy - Ofitsiant Paneli uchun rang */
+    text-align: center;
+    margin: 0 0 30px 0;
+    font-weight: 700;
+    font-size: 2.5em;
+}
+
+.chef-dashboard-container {
+    max-width: 1200px;
+    margin: 20px auto; 
+    padding: 30px;
+    background-color: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+    border: 1px solid #e0e0e0; 
+}
+
+.status-info {
+    text-align: left; 
+    margin-bottom: 20px;
+    font-size: 1.2em;
+    font-weight: 600;
+    color: #34495e;
+    border-bottom: 2px solid #3498db;
+    padding-bottom: 10px;
+}
+
+.orders-list-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 20px; 
+    padding-top: 10px;
+}
+
+/* --- Taom Kartasi Stili --- */
+.menu-item {
+    background-color: #fcfcfc;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 1px 5px rgba(0, 0, 0, 0.08);
+    border: 1px solid #eee;
+    display: flex; 
+    gap: 15px;
+    align-items: flex-start;
+}
+.item-image {
+    width: 70px; height: 70px;
+    object-fit: cover;
+    border-radius: 6px;
+    border: 1px solid #ddd;
+    flex-shrink: 0; 
+}
+.item-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 3px;
+}
+.item-name {
+    font-weight: 700;
+    font-size: 1.1em;
+    color: #34495e;
+}
+.item-qty {
+    font-weight: 700;
+    color: #e67e22; 
+    font-size: 1.1em;
+}
+.item-price {
+    font-weight: 600;
+    color: #2ecc71; 
+    font-size: 0.95em;
+    margin-bottom: 5px;
+}
+.item-description {
+    font-size: 0.85em;
+    color: #7f8c8d;
+    margin: 0;
+}
+
+/* --- Tugmalar uchun O'ram --- */
+.button-wrapper {
+    display: flex;
+    gap: 15px;
+    margin-top: 25px;
+}
+
+/* --- Asosiy Tugmalar Stili --- */
+.add-dummy-btn {
+    display: block;
+    width: 50%;
+    padding: 12px;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 1.1em;
+    font-weight: 700;
+    cursor: pointer;
+    margin: 0;
+    transition: background-color 0.3s, transform 0.1s;
+}
+
+.get-receipt-btn {
+    background-color: #f39c12; 
+}
+.get-receipt-btn:hover {
+    background-color: #e67e22;
+}
+
+.deliver-order-btn {
+    background-color: #3498db; 
+}
+.deliver-order-btn:hover {
+    background-color: #2980b9;
+}
+.add-dummy-btn:active {
+    transform: scale(0.99);
+}
+
+
+/* --- CHEK KO'RSATISH STILI (MODAL) --- */
+.receipt-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    display: none; 
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.receipt-content {
+    background: white;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+    width: 350px; 
+    max-height: 90vh;
+    overflow-y: auto;
+    font-family: 'Courier New', Courier, monospace; 
+    position: relative;
+    border: 3px dashed #333;
+}
+
+.receipt-content h3 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #2c3e50;
+    font-size: 1.4em;
+    border-bottom: 1px dashed #aaa;
+    padding-bottom: 10px;
+}
+
+.receipt-item {
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.9em;
+    padding: 5px 0;
+    white-space: nowrap; 
+    overflow: hidden; 
+}
+.receipt-item:after {
+    content: " ............................................ ";
+    overflow: hidden;
+    letter-spacing: 2px;
+    white-space: nowrap;
+    display: inline-block;
+    vertical-align: bottom;
+    padding: 0 5px;
+}
+.receipt-item span:first-child {
+    flex-shrink: 0;
+    padding-right: 5px;
+}
+.receipt-item span:last-child {
+    flex-shrink: 0;
+    padding-left: 5px;
+}
+
+.receipt-total {
+    display: flex;
+    justify-content: space-between;
+    font-size: 1.1em;
+    font-weight: bold;
+    margin-top: 5px;
+    padding-top: 5px;
+    border-top: 1px solid #aaa;
+}
+
+/* Jami summa qatorini ajratib ko'rsatish */
+.receipt-total:last-child {
+    font-size: 1.2em;
+    padding-top: 10px;
+    border-top: 2px solid #333;
+}
+
+.receipt-close-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: #e74c3c;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+    font-size: 1.1em;
+    line-height: 30px;
+    text-align: center;
+}
+
+/* --- Media Queries --- */
+@media (max-width: 768px) {
+    .chef-dashboard-container { padding: 20px; margin: 15px auto; }
+    h1 { font-size: 2em; }
+    .orders-list-grid { grid-template-columns: 1fr; gap: 15px; }
+    .item-image { width: 60px; height: 60px; }
+    .button-wrapper { flex-direction: column; gap: 10px; }
+    .button-wrapper .add-dummy-btn { width: 100%; }
+}
+@media (max-width: 480px) {
+    .receipt-content { width: 90%; padding: 20px; }
+    .item-description { display: none; }
+}
