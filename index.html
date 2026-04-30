@@ -1,0 +1,460 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guldu Bloom Restorani</title>
+    
+    <link rel="stylesheet" href="./css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <nav class="main-navigation"></nav>
+            <h1>
+                <i class="fas fa-utensils"></i> Guldu Bloom Restorani
+            </h1>
+            <a href="./checkout.html" id="cart-link" class="cart-link">
+                <button id="cart-button" class="cart-button">
+                    <i class="fas fa-shopping-cart"></i> 
+                    <span id="cart-count" class="cart-count">0</span>
+                </button>
+            </a>
+        </div>
+    </header>
+
+    <main id="menu-container">
+        
+        <section class="menu-category">
+            <h2 class="category-title">Boshlang'ich Taomlar</h2>
+            
+            <div class="carousel-container">
+                <button class="nav-button prev-button">
+                    <i class="fas fa-chevron-left"></i> 
+                </button>
+                
+                <div class="carousel-window">
+                    <div class="carousel-track">
+                        <div class="menu-item" data-item-key="Pomidor_Kremli_Sho'rva" data-price="35000">
+                            <img src="./image/Pomidor.jfif" alt="Pomidor Kremli Sho'rva" class="item-image">
+                            <div class="item-details">
+                                <a href="order.html?item=Pomidor_Kremli_Sho'rva" class="menu-item-link">
+                                    <div class="item-name">Pomidor Kremli Sho'rva</div>
+                                    <div class="item-price">35,000 so'm</div>
+                                    <p class="item-description">Yangi pomidor, zaytun moyi va rayhon bilan tayyorlangan krem sho'rva.</p>
+                                </a>
+                                <div class="add-to-cart-section">
+                                    <div class="quantity-control small">
+                                        <button type="button" class="quantity-btn minus-btn-small" data-action="minus">-</button>
+                                        <input type="number" class="item-quantity-input" value="1" min="1" readonly>
+                                        <button type="button" class="quantity-btn plus-btn-small" data-action="plus">+</button>
+                                    </div>
+                                    <button class="add-to-cart-btn"><i class="fas fa-plus"></i> Qo'shish</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="menu-item" data-item-key="Qisqichbaqa" data-price="55000">
+                            <img src="./image/Qisqichbaqa.jfif" alt="Qisqichbaqa Qiyma" class="item-image">
+                            <div class="item-details">
+                                <a href="order.html?item=Qisqichbaqa" class="menu-item-link">
+                                    <div class="item-name">Qisqichbaqa</div>
+                                    <div class="item-price">55,000 so'm</div>
+                                    <p class="item-description">Qarsildoq qisqichbaqa qiyma, limonli mayonez sosi bilan tortiladi.</p>
+                                </a>
+                                <div class="add-to-cart-section">
+                                    <div class="quantity-control small">
+                                        <button type="button" class="quantity-btn minus-btn-small" data-action="minus">-</button>
+                                        <input type="number" class="item-quantity-input" value="1" min="1" readonly>
+                                        <button type="button" class="quantity-btn plus-btn-small" data-action="plus">+</button>
+                                    </div>
+                                    <button class="add-to-cart-btn"><i class="fas fa-plus"></i> Qo'shish</button>
+                                </div>
+                            </div>
+                        </div>
+                    
+                        <div class="menu-item" data-item-key="Qovurilgan_Baklajan" data-price="38000">
+                            <img src="./image/QovurilganBaklajan.jfif" alt="Qovurilgan Baklajan" class="item-image">
+                            <div class="item-details">
+                                <a href="order.html?item=Qovurilgan_Baklajan" class="menu-item-link">
+                                    <div class="item-name">Qovurilgan Baklajan</div>
+                                    <div class="item-price">38,000 so'm</div>
+                                    <p class="item-description">Teriaki sosi ostida qovurilgan baklajan, kunjut va yashil piyoz bilan.</p>
+                                </a>
+                                <div class="add-to-cart-section">
+                                    <div class="quantity-control small">
+                                        <button type="button" class="quantity-btn minus-btn-small" data-action="minus">-</button>
+                                        <input type="number" class="item-quantity-input" value="1" min="1" readonly>
+                                        <button type="button" class="quantity-btn plus-btn-small" data-action="plus">+</button>
+                                    </div>
+                                    <button class="add-to-cart-btn"><i class="fas fa-plus"></i> Qo'shish</button>
+                                </div>
+                            </div>
+                        </div>
+                    
+                        <div class="menu-item" data-item-key="Klassik_Bruschetta" data-price="28000">
+                            <img src="./image/KlassikBruschetta.jfif" alt="Bruschetta" class="item-image">
+                            <div class="item-details">
+                                <a href="order.html?item=Klassik_Bruschetta" class="menu-item-link">
+                                    <div class="item-name">Klassik Bruschetta</div>
+                                    <div class="item-price">28,000 so'm</div>
+                                    <p class="item-description">Pishloq, rayhon va balzam sirkasi bilan qovurilgan non bo'laklari.</p>
+                                </a>
+                                <div class="add-to-cart-section">
+                                    <div class="quantity-control small">
+                                        <button type="button" class="quantity-btn minus-btn-small" data-action="minus">-</button>
+                                        <input type="number" class="item-quantity-input" value="1" min="1" readonly>
+                                        <button type="button" class="quantity-btn plus-btn-small" data-action="plus">+</button>
+                                    </div>
+                                    <button class="add-to-cart-btn"><i class="fas fa-plus"></i> Qo'shish</button>
+                                </div>
+                            </div>
+                        </div>
+                    
+                        <div class="menu-item" data-item-key="Zaytun_Salat" data-price="22000">
+                            <img src="./image/ZaytunSalat.jfif" alt="Qo'shimcha taom 1" class="item-image">
+                            <div class="item-details">
+                                <a href="order.html?item=Zaytun_Salat" class="menu-item-link">
+                                    <div class="item-name">Zaytun Salat</div>
+                                    <div class="item-price">22,000 so'm</div>
+                                    <p class="item-description">Feta pishlog'i va Kalamata zaytunlari bilan.</p>
+                                </a>
+                                <div class="add-to-cart-section">
+                                    <div class="quantity-control small">
+                                        <button type="button" class="quantity-btn minus-btn-small" data-action="minus">-</button>
+                                        <input type="number" class="item-quantity-input" value="1" min="1" readonly>
+                                        <button type="button" class="quantity-btn plus-btn-small" data-action="plus">+</button>
+                                    </div>
+                                    <button class="add-to-cart-btn"><i class="fas fa-plus"></i> Qo'shish</button>
+                                </div>
+                            </div>
+                        </div>
+                    
+                        <div class="menu-item" data-item-key="Piyoz_Halg'asi" data-price="20000">
+                            <img src="./image/Piyoz Halg'asi.jfif" alt="Qo'shimcha taom 2" class="item-image">
+                            <div class="item-details">
+                                <a href="order.html?item=Piyoz_Halg'asi" class="menu-item-link">
+                                    <div class="item-name">Piyoz Halg'asi</div>
+                                    <div class="item-price">20,000 so'm</div>
+                                    <p class="item-description">Qarsildoq qovurilgan piyoz halqalari, tomat sosi bilan.</p>
+                                </a>
+                                <div class="add-to-cart-section">
+                                    <div class="quantity-control small">
+                                        <button type="button" class="quantity-btn minus-btn-small" data-action="minus">-</button>
+                                        <input type="number" class="item-quantity-input" value="1" min="1" readonly>
+                                        <button type="button" class="quantity-btn plus-btn-small" data-action="plus">+</button>
+                                    </div>
+                                    <button class="add-to-cart-btn"><i class="fas fa-plus"></i> Qo'shish</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <button class="nav-button next-button">
+                    <i class="fas fa-chevron-right"></i>
+                </button>
+            </div>
+        </section>
+        
+        <section class="menu-category">
+            <h2 class="category-title">Asosiy Kurslar</h2>
+            
+            <div class="carousel-container">
+                <button class="nav-button prev-button">
+                    <i class="fas fa-chevron-left"></i> 
+                </button>
+                
+                <div class="carousel-window">
+                    <div class="carousel-track">
+                        
+                        <div class="menu-item" data-item-key="Ribay_Steyki" data-price="180000">
+                            <img src="./image/Ribay Steyki.jfif" alt="Ribay Steyki" class="item-image">
+                            <div class="item-details">
+                                <a href="order.html?item=Ribay_Steyki" class="menu-item-link">
+                                    <div class="item-name">Ribay Steyki</div>
+                                    <div class="item-price">180,000 so'm</div>
+                                    <p class="item-description">O'rta qovurilgan Ribay, ismaloq pyuresi va qizil sharob sosi bilan.</p>
+                                </a>
+                                <div class="add-to-cart-section">
+                                    <div class="quantity-control small">
+                                        <button type="button" class="quantity-btn minus-btn-small" data-action="minus">-</button>
+                                        <input type="number" class="item-quantity-input" value="1" min="1" readonly>
+                                        <button type="button" class="quantity-btn plus-btn-small" data-action="plus">+</button>
+                                    </div>
+                                    <button class="add-to-cart-btn"><i class="fas fa-plus"></i> Qo'shish</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="menu-item" data-item-key="Qizil_Baliq_Filetosi" data-price="135000">
+                            <img src="./image/Qizil Baliq Filetosi.jfif" alt="Qizil Baliq Filetosi" class="item-image">
+                            <div class="item-details">
+                                <a href="order.html?item=Qizil_Baliq_Filetosi" class="menu-item-link">
+                                    <div class="item-name">Qizil Baliq Filetosi</div>
+                                    <div class="item-price">135,000 so'm</div>
+                                    <p class="item-description">Qovurilgan qizil baliq, qushqo'nmas va oq sharob sosi bilan tortiladi.</p>
+                                </a>
+                                <div class="add-to-cart-section">
+                                    <div class="quantity-control small">
+                                        <button type="button" class="quantity-btn minus-btn-small" data-action="minus">-</button>
+                                        <input type="number" class="item-quantity-input" value="1" min="1" readonly>
+                                        <button type="button" class="quantity-btn plus-btn-small" data-action="plus">+</button>
+                                    </div>
+                                    <button class="add-to-cart-btn"><i class="fas fa-plus"></i> Qo'shish</button>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="menu-item" data-item-key="Qo'zi_go'shtli_Pasta" data-price="95000">
+                            <img src="./image/Qo'zi go'shtli Pasta.jfif" alt="Qo'zi go'shtli Pasta" class="item-image">
+                            <div class="item-details">
+                                <a href="order.html?item=Qo'zi_go'shtli_Pasta" class="menu-item-link">
+                                    <div class="item-name">Qo'zi go'shtli Pasta</div>
+                                    <div class="item-price">95,000 so'm</div>
+                                    <p class="item-description">Uy sharoitida tayyorlangan pasta, uzoq vaqt pishirilgan qo'zi go'shti ragu sosi bilan.</p>
+                                </a>
+                                <div class="add-to-cart-section">
+                                    <div class="quantity-control small">
+                                        <button type="button" class="quantity-btn minus-btn-small" data-action="minus">-</button>
+                                        <input type="number" class="item-quantity-input" value="1" min="1" readonly>
+                                        <button type="button" class="quantity-btn plus-btn-small" data-action="plus">+</button>
+                                    </div>
+                                    <button class="add-to-cart-btn"><i class="fas fa-plus"></i> Qo'shish</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="menu-item" data-item-key="O'rdak_Konfi" data-price="160000">
+                            <img src="./image/O'rdak Konfi.jfif" alt="O'rdak Konfi" class="item-image">
+                            <div class="item-details">
+                                <a href="order.html?item=O'rdak_Konfi" class="menu-item-link">
+                                    <div class="item-name">O'rdak Konfi</div>
+                                    <div class="item-price">160,000 so'm</div>
+                                    <p class="item-description">Sekin pishirilgan o'rdak oyog'i, qovoq pyuresi va mevali sous bilan.</p>
+                                </a>
+                                <div class="add-to-cart-section">
+                                    <div class="quantity-control small">
+                                        <button type="button" class="quantity-btn minus-btn-small" data-action="minus">-</button>
+                                        <input type="number" class="item-quantity-input" value="1" min="1" readonly>
+                                        <button type="button" class="quantity-btn plus-btn-small" data-action="plus">+</button>
+                                    </div>
+                                    <button class="add-to-cart-btn"><i class="fas fa-plus"></i> Qo'shish</button>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="menu-item" data-item-key="Mushroom_Risotto" data-price="85000">
+                            <img src="./image/Mushroom Risotto.jfif" alt="Qo'shimcha taom 3" class="item-image">
+                            <div class="item-details">
+                                <a href="order.html?item=Mushroom_Risotto" class="menu-item-link">
+                                    <div class="item-name">Mushroom Risotto</div>
+                                    <div class="item-price">85,000 so'm</div>
+                                    <p class="item-description">Qo'ziqorinli, kremga boy italyan guruchli taomi.</p>
+                                </a>
+                                <div class="add-to-cart-section">
+                                    <div class="quantity-control small">
+                                        <button type="button" class="quantity-btn minus-btn-small" data-action="minus">-</button>
+                                        <input type="number" class="item-quantity-input" value="1" min="1" readonly>
+                                        <button type="button" class="quantity-btn plus-btn-small" data-action="plus">+</button>
+                                    </div>
+                                    <button class="add-to-cart-btn"><i class="fas fa-plus"></i> Qo'shish</button>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                
+                <button class="nav-button next-button">
+                    <i class="fas fa-chevron-right"></i>
+                </button>
+            </div>
+        </section>
+        
+
+        <section class="menu-category">
+            <h2 class="category-title">Ichimliklar</h2>
+            
+            <div class="carousel-container">
+                <button class="nav-button prev-button">
+                    <i class="fas fa-chevron-left"></i> 
+                </button>
+                
+                <div class="carousel-window">
+                    <div class="carousel-track">
+                        
+                        <div class="menu-item" data-item-key="Klassik_Espresso" data-price="15000">
+                            <img src="./image/Klassik Espresso.jfif" alt="Espresso" class="item-image">
+                            <div class="item-details">
+                                <a href="order.html?item=Klassik_Espresso" class="menu-item-link">
+                                    <div class="item-name">Klassik Espresso</div>
+                                    <div class="item-price">15,000 so'm</div>
+                                    <p class="item-description">Kremali, boy ta'mli konsentrlangan italyan qahvasi.</p>
+                                </a>
+                                <div class="add-to-cart-section">
+                                    <div class="quantity-control small">
+                                        <button type="button" class="quantity-btn minus-btn-small" data-action="minus">-</button>
+                                        <input type="number" class="item-quantity-input" value="1" min="1" readonly>
+                                        <button type="button" class="quantity-btn plus-btn-small" data-action="plus">+</button>
+                                    </div>
+                                    <button class="add-to-cart-btn"><i class="fas fa-plus"></i> Qo'shish</button>
+                                </div>
+                            </div>
+                        </div>
+                
+                        <div class="menu-item" data-item-key="Issiq_Latte" data-price="28000">
+                            <img src="./image/Issiq Latte.jfif" alt="Latte" class="item-image">
+                            <div class="item-details">
+                                <a href="order.html?item=Issiq_Latte" class="menu-item-link">
+                                    <div class="item-name">Issiq Latte</div>
+                                    <div class="item-price">28,000 so'm</div>
+                                    <p class="item-description">Espresso, bug'langan sut va yupqa sut ko'pigi qatlami.</p>
+                                </a>
+                                <div class="add-to-cart-section">
+                                    <div class="quantity-control small">
+                                        <button type="button" class="quantity-btn minus-btn-small" data-action="minus">-</button>
+                                        <input type="number" class="item-quantity-input" value="1" min="1" readonly>
+                                        <button type="button" class="quantity-btn plus-btn-small" data-action="plus">+</button>
+                                    </div>
+                                    <button class="add-to-cart-btn"><i class="fas fa-plus"></i> Qo'shish</button>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="menu-item" data-item-key="Bokira_Mojito_(Mintsiz)" data-price="35000">
+                            <img src="./image/Bokira Mojito (Mintsiz).jfif" alt="Mojito" class="item-image">
+                            <div class="item-details">
+                                <a href="order.html?item=Bokira_Mojito_(Mintsiz)" class="menu-item-link">
+                                    <div class="item-name">Bokira Mojito (Mintsiz)</div>
+                                    <div class="item-price">35,000 so'm</div>
+                                    <p class="item-description">Laym, yalpiz va soda asosidagi tetiklantiruvchi yozgi ichimlik.</p>
+                                </a>
+                                <div class="add-to-cart-section">
+                                    <div class="quantity-control small">
+                                        <button type="button" class="quantity-btn minus-btn-small" data-action="minus">-</button>
+                                        <input type="number" class="item-quantity-input" value="1" min="1" readonly>
+                                        <button type="button" class="quantity-btn plus-btn-small" data-action="plus">+</button>
+                                    </div>
+                                    <button class="add-to-cart-btn"><i class="fas fa-plus"></i> Qo'shish</button>
+                                </div>
+                            </div>
+                        </div>
+                
+                        <div class="menu-item" data-item-key="Yangi_Apelsin_Sharvati" data-price="40000">
+                            <img src="./image/Yangi Apelsin Sharvati.jfif" alt="Apelsin Sharvati" class="item-image">
+                            <div class="item-details">
+                                <a href="order.html?item=Yangi_Apelsin_Sharvati" class="menu-item-link">
+                                    <div class="item-name">Yangi Apelsin Sharvati</div>
+                                    <div class="item-price">40,000 so'm</div>
+                                    <p class="item-description">Yangi siqilgan 100% tabiiy, shirin apelsin sharvati.</p>
+                                </a>
+                                <div class="add-to-cart-section">
+                                    <div class="quantity-control small">
+                                        <button type="button" class="quantity-btn minus-btn-small" data-action="minus">-</button>
+                                        <input type="number" class="item-quantity-input" value="1" min="1" readonly>
+                                        <button type="button" class="quantity-btn plus-btn-small" data-action="plus">+</button>
+                                    </div>
+                                    <button class="add-to-cart-btn"><i class="fas fa-plus"></i> Qo'shish</button>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="menu-item" data-item-key="Coca-Cola_(0.5L)" data-price="12000">
+                            <img src="./image/Coca-Cola (0.5L).jfif" alt="Gazli Ichimlik" class="item-image">
+                            <div class="item-details">
+                                <a href="order.html?item=Coca-Cola_(0.5L)" class="menu-item-link">
+                                    <div class="item-name">Coca-Cola (0.5L)</div>
+                                    <div class="item-price">12,000 so'm</div>
+                                    <p class="item-description">Sovutilgan qadoqlangan gazlangan alkogolsiz ichimlik.</p>
+                                </a>
+                                <div class="add-to-cart-section">
+                                    <div class="quantity-control small">
+                                        <button type="button" class="quantity-btn minus-btn-small" data-action="minus">-</button>
+                                        <input type="number" class="item-quantity-input" value="1" min="1" readonly>
+                                        <button type="button" class="quantity-btn plus-btn-small" data-action="plus">+</button>
+                                    </div>
+                                    <button class="add-to-cart-btn"><i class="fas fa-plus"></i> Qo'shish</button>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="menu-item" data-item-key="Marokash_Yalpiz_Choyi" data-price="18000">
+                            <img src="./image/Marokash Yalpiz Choyi.jfif" alt="Yalpizli Choy" class="item-image">
+                            <div class="item-details">
+                                <a href="order.html?item=Marokash_Yalpiz_Choyi" class="menu-item-link">
+                                    <div class="item-name">Marokash Yalpiz Choyi</div>
+                                    <div class="item-price">18,000 so'm</div>
+                                    <p class="item-description">Yalpiz barglari va yashil choyning issiq, aromatik aralashmasi.</p>
+                                </a>
+                                <div class="add-to-cart-section">
+                                    <div class="quantity-control small">
+                                        <button type="button" class="quantity-btn minus-btn-small" data-action="minus">-</button>
+                                        <input type="number" class="item-quantity-input" value="1" min="1" readonly>
+                                        <button type="button" class="quantity-btn plus-btn-small" data-action="plus">+</button>
+                                    </div>
+                                    <button class="add-to-cart-btn"><i class="fas fa-plus"></i> Qo'shish</button>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="menu-item" data-item-key="Mineral_Suv_(Gazsiz)" data-price="8000">
+                            <img src="./image/Mineral Suv (Gazsiz).jfif" alt="Mineral Suv" class="item-image">
+                            <div class="item-details">
+                                <a href="order.html?item=Mineral_Suv_(Gazsiz)" class="menu-item-link">
+                                    <div class="item-name">Mineral Suv (Gazsiz)</div>
+                                    <div class="item-price">8,000 so'm</div>
+                                    <p class="item-description">Yuqori sifatli toza ichimlik suvi (0.5L).</p>
+                                </a>
+                                <div class="add-to-cart-section">
+                                    <div class="quantity-control small">
+                                        <button type="button" class="quantity-btn minus-btn-small" data-action="minus">-</button>
+                                        <input type="number" class="item-quantity-input" value="1" min="1" readonly>
+                                        <button type="button" class="quantity-btn plus-btn-small" data-action="plus">+</button>
+                                    </div>
+                                    <button class="add-to-cart-btn"><i class="fas fa-plus"></i> Qo'shish</button>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="menu-item" data-item-key="Uy_Limonadi" data-price="25000">
+                            <img src="./image/Uy Limonadi.jfif" alt="Limonad" class="item-image">
+                            <div class="item-details">
+                                <a href="order.html?item=Uy_Limonadi" class="menu-item-link">
+                                    <div class="item-name">Uy Limonadi</div>
+                                    <div class="item-price">25,000 so'm</div>
+                                    <p class="item-description">Yangi limon sharbati, shakar va suvdan tayyorlangan muzli ichimlik.</p>
+                                </a>
+                                <div class="add-to-cart-section">
+                                    <div class="quantity-control small">
+                                        <button type="button" class="quantity-btn minus-btn-small" data-action="minus">-</button>
+                                        <input type="number" class="item-quantity-input" value="1" min="1" readonly>
+                                        <button type="button" class="quantity-btn plus-btn-small" data-action="plus">+</button>
+                                    </div>
+                                    <button class="add-to-cart-btn"><i class="fas fa-plus"></i> Qo'shish</button>
+                                </div>
+                            </div>
+                        </div>
+                
+                    </div>
+                </div>
+                
+                <button class="nav-button next-button">
+                    <i class="fas fa-chevron-right"></i>
+                </button>
+            </div>
+        </section>
+        
+        
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Guldu Bloom Restorani. Barcha huquqlar himoyalangan.</p>
+    </footer>
+    
+    <script src="./js/script.js"></script>
+</body>
+</html>

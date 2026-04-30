@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="uz">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Oshpaz Paneli | Buyurtmalar</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./css/chef-style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+</head>
+
+<body>
+    <h1> <i class="fas fa-kitchen-set"></i> Oshpaz Buyurtmalar Paneli</h1>
+    <div class="chef-dashboard-container">
+        <p class="status-info">Buyurtma soni: <span id="active-order-count">1</span></p>
+
+        <div class="orders-list-grid" id="orders-list-container">
+            <div class="menu-item" data-item-key="Klassik_Espresso" data-price="15000">
+                <img src="./image/Klassik Espresso.jfif" alt="Espresso" class="item-image">
+                <div class="item-details">
+                    <div class="menu-item-link">
+                        <div class="item-name">Klassik Espresso</div>
+                        <div class="item-price">15,000 so'm</div>
+                        <p class="item-description">Kremali, boy ta'mli konsentrlangan italyan qahvasi.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="menu-item" data-item-key="Klassik_Espresso" data-price="15000">
+                <img src="./image/Klassik Espresso.jfif" alt="Espresso" class="item-image">
+                <div class="item-details">
+                    <div class="menu-item-link">
+                        <div class="item-name">Klassik Espresso</div>
+                        <div class="item-price">15,000 so'm</div>
+                        <p class="item-description">Kremali, boy ta'mli konsentrlangan italyan qahvasi.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="menu-item" data-item-key="Pomidor_Kremli_Sho'rva" data-price="35000">
+                <img src="./image/Pomidor.jfif" alt="Pomidor Kremli Sho'rva" class="item-image">
+                <div class="item-details">
+                    <div class="menu-item-link">
+                        <div class="item-name">Pomidor Kremli Sho'rva</div>
+                        <div class="item-price">35,000 so'm</div>
+                        <p class="item-description">Yangi pomidor, zaytun moyi va rayhon bilan tayyorlangan krem sho'rva.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <p id="no-orders-message" class="no-orders-message" style="display: none;">
+            <i class="fas fa-bell-slash"></i> Hozircha faol buyurtmalar yo'q.
+        </p>
+
+        <button id="add-dummy-order-btn" class="add-dummy-btn">Shu yerdan olibketish uchun</button>
+    </div>
+
+    <div class="chef-dashboard-container">
+        <p class="status-info">Buyurtma soni: <span id="active-order-count">2</span></p>
+
+        <div class="orders-list-grid" id="orders-list-container">
+            <div class="menu-item" data-item-key="Klassik_Espresso" data-price="15000">
+                <img src="./image/Klassik Espresso.jfif" alt="Espresso" class="item-image">
+                <div class="item-details">
+                    <div class="menu-item-link">
+                        <div class="item-name">Klassik Espresso</div>
+                        <div class="item-price">15,000 so'm</div>
+                        <p class="item-description">Kremali, boy ta'mli konsentrlangan italyan qahvasi.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="menu-item" data-item-key="Pomidor_Kremli_Sho'rva" data-price="35000">
+                <img src="./image/Pomidor.jfif" alt="Pomidor Kremli Sho'rva" class="item-image">
+                <div class="item-details">
+                    <div class="menu-item-link">
+                        <div class="item-name">Pomidor Kremli Sho'rva</div>
+                        <div class="item-price">35,000 so'm</div>
+                        <p class="item-description">Yangi pomidor, zaytun moyi va rayhon bilan tayyorlangan krem sho'rva.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <p id="no-orders-message" class="no-orders-message" style="display: none;">
+            <i class="fas fa-bell-slash"></i> Hozircha faol buyurtmalar yo'q.
+        </p>
+
+        <button id="add-dummy-order-btn" class="add-dummy-btn">Kuryer uchun</button>
+    </div>
+
+    <div class="chef-dashboard-container">
+        <p class="status-info">Buyurtma soni: <span id="active-order-count">3</span></p>
+
+        <div class="orders-list-grid" id="orders-list-container">
+            <div class="menu-item" data-item-key="Klassik_Espresso" data-price="15000">
+                <img src="./image/Klassik Espresso.jfif" alt="Espresso" class="item-image">
+                <div class="item-details">
+                    <div class="menu-item-link">
+                        <div class="item-name">Klassik Espresso</div>
+                        <div class="item-price">15,000 so'm</div>
+                        <p class="item-description">Kremali, boy ta'mli konsentrlangan italyan qahvasi.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="menu-item" data-item-key="Pomidor_Kremli_Sho'rva" data-price="35000">
+                <img src="./image/Pomidor.jfif" alt="Pomidor Kremli Sho'rva" class="item-image">
+                <div class="item-details">
+                    <div class="menu-item-link">
+                        <div class="item-name">Pomidor Kremli Sho'rva</div>
+                        <div class="item-price">35,000 so'm</div>
+                        <p class="item-description">Yangi pomidor, zaytun moyi va rayhon bilan tayyorlangan krem sho'rva.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <p id="no-orders-message" class="no-orders-message" style="display: none;">
+            <i class="fas fa-bell-slash"></i> Hozircha faol buyurtmalar yo'q.
+        </p>
+
+        <button id="add-dummy-order-btn" class="add-dummy-btn">Stol uchun</button>
+    </div>
+
+    <script src="./js/chef-script.js"></script>
+</body>
+
+</html>

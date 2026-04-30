@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="uz">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ofitsiant Paneli | Buyurtmalar</title>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="./css/service.css"> 
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+</head>
+
+<body>
+    <h1> <i class="fas fa-handshake"></i> Afitsiant Buyurtmalar Paneli </h1>
+    
+    <div class="chef-dashboard-container" data-order-id="1">
+        <p class="status-info">Buyurtma (Stol **12**): <span id="active-order-count-1">3 ta taom</span></p>
+
+        <div class="orders-list-grid" id="orders-list-container-1">
+            <div class="menu-item" data-item-key="Klassik_Espresso" data-price="15000" data-qty="2"> 
+                <img src="./image/Klassik Espresso.jfif" alt="Espresso" class="item-image">
+                <div class="item-details">
+                    <div class="item-header">
+                        <div class="item-name">Klassik Espresso</div>
+                        <div class="item-qty">x2</div> 
+                    </div>
+                    <div class="item-price">30,000 so'm</div>
+                    <p class="item-description">Kremali, boy ta'mli konsentrlangan italyan qahvasi.</p>
+                </div>
+            </div>
+            
+            <div class="menu-item" data-item-key="Qisqichbaqa" data-price="55000" data-qty="1">
+                <img src="./image/Qisqichbaqa.jfif" alt="Qisqichbaqa Qiyma" class="item-image">
+                <div class="item-details">
+                    <div class="item-header">
+                        <div class="item-name">Qisqichbaqa Qiyma</div>
+                        <div class="item-qty">x1</div> 
+                    </div>
+                    <div class="item-price">55,000 so'm</div>
+                    <p class="item-description">Qarsildoq qisqichbaqa qiyma, limonli mayonez sosi bilan.</p>
+                </div>
+            </div>
+
+            <div class="menu-item" data-item-key="Pomidor_Kremli_Sho'rva" data-price="35000" data-qty="1">
+                <img src="./image/Pomidor.jfif" alt="Pomidor Kremli Sho'rva" class="item-image">
+                <div class="item-details">
+                    <div class="item-header">
+                        <div class="item-name">Pomidor Kremli Sho'rva</div>
+                        <div class="item-qty">x1</div> 
+                    </div>
+                    <div class="item-price">35,000 so'm</div>
+                    <p class="item-description">Yangi pomidor, zaytun moyi va rayhon bilan tayyorlangan krem sho'rva.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="button-wrapper">
+            <button id="get-receipt-btn-1" class="add-dummy-btn get-receipt-btn">Chekni olish (PDF)</button>
+            <button id="deliver-order-btn-1" class="add-dummy-btn deliver-order-btn" data-table="12">12 - Stolga yetkazish</button>
+        </div>
+    </div>
+
+    <div class="chef-dashboard-container" data-order-id="2">
+        <p class="status-info">Buyurtma (Stol **2**): <span id="active-order-count-2">1 ta taom</span></p>
+
+        <div class="orders-list-grid" id="orders-list-container-2">
+            <div class="menu-item" data-item-key="Qizil_Baliq_Filetosi" data-price="135000" data-qty="1">
+                <img src="./image/Qizil Baliq Filetosi.jfif" alt="Qizil Baliq Filetosi" class="item-image">
+                <div class="item-details">
+                    <div class="item-header">
+                        <div class="item-name">Qizil Baliq Filetosi</div>
+                        <div class="item-qty">x1</div> 
+                    </div>
+                    <div class="item-price">135,000 so'm</div>
+                    <p class="item-description">Qovurilgan qizil baliq, qushqo'nmas va oq sharob sosi bilan tortiladi.</p>
+                </div>
+            </div>
+        </div>
+        <div class="button-wrapper">
+            <button id="get-receipt-btn-2" class="add-dummy-btn get-receipt-btn">Chekni olish (PDF)</button>
+            <button id="deliver-order-btn-2" class="add-dummy-btn deliver-order-btn" data-table="2">2 - Stolga yetkazish</button>
+        </div>
+    </div>
+
+    <div class="receipt-overlay" id="receipt-overlay">
+        <div class="receipt-content" id="receipt-content">
+            <button class="receipt-close-btn" id="receipt-close-btn">&times;</button>
+            <h3>GULDU BLOOM RESTORANI</h3>
+            <p style="text-align: center; margin-bottom: 5px;">Chek raqami: <span id="receipt-order-id"></span></p>
+            <p style="text-align: center; font-size: 0.9em; margin-bottom: 15px;">Kassa: Ofitsiant (23.11.2025)</p>
+
+            <div id="receipt-items-list">
+                </div>
+                
+                <div class="receipt-total">
+                    <span>Xizmad ko'rsatish:</span>
+                    <span id="receipt-service-price">5000 so'm</span> 
+                </div>
+
+            <div class="receipt-total">
+                <span>Jami Summa:</span>
+                <span id="receipt-total-price">0 so'm</span>
+            </div>
+            <p style="text-align: center; font-size: 0.8em; margin-top: 20px;">Xizmat ko'rsatganingiz uchun rahmat!</p>
+        </div>
+    </div>
+    
+    <script src="./js/service.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Savat va Buyurtmani Rasmiylashtirish</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./css/checkout-style.css"> 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+</head>
+<body>
+
+    <div class="order-container">
+        <h1> <i class="fas fa-shopping-cart"></i> Buyurtmani Rasmiylashtirish</h1>
+        
+        <section class="cart-items-section">
+            <h2>Savatdagi Taomlar:</h2>
+            <div id="cart-list" class="cart-list-container">
+                <p id="empty-cart-message" style="text-align: center; color: #888; display: none;">Savat bo'sh. Menyudan taom tanlang!</p>
+            </div>
+            
+            <div class="cart-summary">
+                <div class="summary-line">
+                    <span>Jami Mahsulot Narxi:</span>
+                    <span id="subtotal-price">0 so'm</span>
+                </div>
+                <div class="summary-line delivery-fee">
+                    <span>Yetkazish:</span>
+                    <span id="delivery-fee">0 so'm</span> 
+                </div>
+                <div class="summary-line total-price-line">
+                    <strong>Jami to'lov:</strong>
+                    <strong id="total-price">0 so'm</strong>
+                </div>
+            </div>
+        </section>
+
+        <hr>
+
+        <h2>Buyurtma Turini Tanlang:</h2>
+        <div class="order-type-tabs">
+            <button type="button" class="tab-button active" data-type="dine-in">Shu yerda (Stolda)</button>
+            <button type="button" class="tab-button" data-type="takeout">Olib ketish/Yetkazish</button>
+        </div>
+
+        <form class="order-form" id="main-checkout-form">
+            
+            <div id="dine-in-section" class="order-section active">
+                <h3>Shu yerda ovqatlanish uchun ma'lumot:</h3>
+                
+                <div class="form-group">
+                    <label for="dine-in-table">Stol Raqami: <span class="required">*</span></label>
+                    <input type="text" id="dine-in-table" required placeholder="Masalan: 3, 12, VIP">
+                </div>
+                
+                <div class="form-group">
+                    <label for="dine-in-name">Ismingiz (Xodim uchun): <span class="required">*</span></label>
+                    <input type="text" id="dine-in-name" required placeholder="Ismingizni kiriting">
+                </div>
+            </div>
+
+            <div id="takeout-section" class="order-section">
+                <h3>Olib ketish yoki Yetkazish uchun ma'lumot:</h3>
+                
+                <div class="form-group">
+                    <label for="takeout-name">Ism Familya: <span class="required">*</span></label>
+                    <input type="text" id="takeout-name" required placeholder="Ismingizni kiriting">
+                </div>
+                
+                <div class="form-group">
+                    <label for="takeout-phone">Telefon Raqami: <span class="required">*</span></label>
+                    <input type="tel" id="takeout-phone" required placeholder="+998 XX YYY YY YY">
+                </div>
+                
+                <div class="form-group">
+                    <label for="delivery-method">Qabul qilish usuli: <span class="required">*</span></label>
+                    <select id="delivery-method">
+                        <option value="pickup">Shu yerdan olib ketish (Tez va Bepul)</option>
+                        <option value="delivery">Uyga yetkazib berish (Qo'shimcha narx)</option>
+                    </select>
+                </div>
+
+                <div id="delivery-details">
+                    <div class="form-group">
+                        <label for="delivery-district">Tuman/Shahar: <span class="required">*</span></label>
+                        <input type="text" id="delivery-district" placeholder="Masalan: Mirzo Ulug'bek, Chilonzor">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="takeout-address">To'liq Manzil: <span class="required">*</span></label>
+                        <input type="text" id="takeout-address" placeholder="Ko'cha, uy raqami, mo'ljal">
+                    </div>
+                    <p class="small-info"><i class="fas fa-info-circle"></i> Yetkazish narxi: <span id="delivery-price-info">15,000 so'm</span></p>
+                </div>
+            </div>
+            
+            <div class="form-group">
+                <label for="order-notes">Qo'shimcha Izohlar:</label>
+                <textarea id="order-notes" rows="3" placeholder="Izohlaringizni kiriting (Masalan, allergiya, maxsus talablar)..."></textarea>
+            </div>
+            
+            <button type="submit" class="submit-order-btn" id="checkout-button">
+                <i class="fas fa-paper-plane"></i> Buyurtmani Tasdiqlash
+            </button>
+        </form>
+
+        <p style="text-align: center; margin-top: 20px;"><a href="index.html" class="back-to-menu-link"><i class="fas fa-arrow-left"></i> Menyuga qaytish</a></p>
+    </div>
+
+    
+    <script src="./js/checkout-script.js"></script>
+    <script src="./js/script.js"></script>
+</body>
+</html>
